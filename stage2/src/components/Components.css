@@ -1,0 +1,188 @@
+
+/* HomeComponent.jsx */
+.homeComponent{
+    background-color: rgb(45, 16, 71);
+    height: 750px;
+    border:5px solid white;
+}
+.homeComponent h1{
+    padding-top:250px;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+/*QuizComponent.css*/
+.quizComponent{
+    background-color: rgb(45, 16, 71);
+    height: 750px;
+    padding:70px;
+    border:5px solid white;
+}
+h2{
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 150px;
+}
+.question{
+    background-color:rgb(248,248,248);
+    color: black;
+    height: 500px;
+    margin-right: 100px;
+    margin-left: 100px;
+    text-align: center;
+}
+.para{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.val{
+    background-color:rgb(29,161,242);
+    width: 460px;
+    height: 30px;
+    border-radius: 24px;
+    color:white;
+}
+.option{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+.button{
+    display: inline-block;
+    width: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.play{
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        width: 250px;
+        margin-top: 100px;
+        font-size: 16px;
+        border-radius: 24px;
+        background-color: rgb(87,184,70);
+    
+}
+
+.btn{
+    margin:150px;
+}
+.b1{
+    background-color: rgb(45, 16, 71);
+    border: none;
+    color: white;
+    margin:10px;
+    padding:10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.b2{
+    background-color: rgb(98, 233, 74);
+    border: none;
+    color: white;
+    margin:10px;
+    padding:10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.b3{
+    background-color:rgb(252, 9, 33);
+    border: none;
+    color: white;
+    margin:10px;
+    padding:10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/*ResultComponent*/
+.resultComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:100px;
+    background-color:rgb(45, 16, 71) ;
+    padding-bottom: 200px;
+    height: 500px;
+    border:5px solid white;
+}
+.resMain{
+    color: rgb(98, 233, 74);
+}
+
+.state{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height:400px;
+    width:800px;
+}
+
+.statehead{
+    font-weight: 10px;
+    color:black;
+    width: 600px;
+    margin-left:10px;
+}
+.statescore{
+    font-weight: 20px;
+    font-size: 40px;
+    width: 600px;
+    color: rgb(29,161,242);
+    margin-left:10px;
+}
+.statedetmarks{
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+}
+
+.statedetails,.statemarks{
+    display: flex;
+    flex-direction: column;
+}
+.statedetails{
+    margin-right: 500px;
+}
+.resbtn{
+    margin-top: 15px;
+}
+
+.playbtn{
+    background-color:rgb(29,161,242) ;
+    border:2px solid  rgb(122, 190, 233);
+    color:  rgb(63, 112, 143);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: large;
+    width:150px;
+}
+
+.backbtn{
+    background-color:rgb(29,161,242);
+    border:2px solid rgb(98, 233, 74);
+    color: rgb(98, 233, 74);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: large;
+    width:150px;
+}
