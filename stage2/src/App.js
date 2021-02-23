@@ -1,15 +1,20 @@
 import React from 'react';
-import HomeComponent from './components/HomeComponent';
 import QuizComponent from './components/QuizComponent';
-import ResultComponent from './components/ResultComponent';
+
+import {Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 import './App.css';
+import HomeComponent from './components/HomeComponent';
 
 function App() {
   return (
     <div className="App">
-      <HomeComponent/>
-      <QuizComponent/>
-      <ResultComponent/>
+     <Router>
+       <Switch>
+      <Route exact path="/" component={HomeComponent}/>
+      <Route exact path="/HomeComponent" component={HomeComponent}/>
+      <Route  path="/QuizComponent" component={QuizComponent}></Route>
+      </Switch>
+      </Router>
     </div>
   );
 }

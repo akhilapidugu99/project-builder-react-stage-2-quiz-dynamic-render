@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Components.css';
+import {BrowserRouter, Link } from 'react-router-dom';
 import questions from'./questions.json';
 
+
 class QuizComponent extends Component {
-    constructor(){    
-        super();
+    constructor(props){    
+        super(props);
     this.state={
         questionno:0,
         quest:[...questions]
@@ -16,10 +18,7 @@ class QuizComponent extends Component {
     nextHandler=()=>{
         this.setState({questionno:this.state.questionno+1});
     }
-
-    quitHandler(){
-        
-    }
+   
 
     render() {
         var val=this.state.quest[this.state.questionno];
@@ -41,7 +40,7 @@ class QuizComponent extends Component {
                    <div className="btn">
                         <button className="b1" onClick={this.previousHandler}> Previous</button>
                         <button className="b2" onClick={this.nextHandler}>Next</button>
-                        <button className="b3" onClick={this.quitHandler}>Quit</button>
+                        <button className="b3" ><Link to='/'>Quit</Link></button>
                    </div>
                    </div>
                </div> 
