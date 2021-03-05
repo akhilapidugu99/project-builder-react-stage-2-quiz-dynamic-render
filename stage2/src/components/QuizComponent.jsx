@@ -5,23 +5,42 @@ import ResultComponent from './ResultComponent';
 import {BrowserRouter,Link} from 'react-router-dom';
 import service from './service.js';
 export default class QuizComponent extends Component {
+    
     constructor(props){    
         super(props);
+        this.tick = this.tick.bind(this);
     this.state={
         questionno:0,
         quest:[...questions],
-        score:0
+        score:0,
+        seconds:180
         };
+        
     }
+    tick() {
+        this.interval = setInterval(() => {
+            if ( this.state.seconds > 0){
+          this.setState(prevState => ({
+            seconds: prevState.seconds - 1
+          })
+          );}
+        }, 1000);
+        
+      }
+      componentDidMount() {
+        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+      }
+      componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+    
     previousHandler=()=>{
         if(this.state.questionno>=1){
         this.setState({questionno:this.state.questionno-1}); }       
     }
     nextHandler=()=>{
         this.setState({questionno:this.state.questionno+1});
-        // if(this.state.questionno===14){
-            
-        // }
+       
     }
     checkOption = (e) => {
         e.preventDefault()
@@ -39,6 +58,7 @@ export default class QuizComponent extends Component {
         var val=this.state.quest[this.state.questionno];
         return(  
         <div>
+           <div>  Seconds: {this.state.seconds}<button className="timer" onClick={this.tick}>Start Timer</button></div>
              {count_ques < 15 &&
                <div className="quizComponent">
                    <div className="question">

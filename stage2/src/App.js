@@ -6,6 +6,7 @@ import QuizComponent from './components/QuizComponent';
 import ResultComponent from './components/ResultComponent';
 
 function App() {
+
   return (
     <div className="App">
      <Router>
